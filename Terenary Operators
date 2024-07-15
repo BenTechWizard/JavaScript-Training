@@ -1,0 +1,11 @@
+// This is an example of a terenary operator
+
+var inputedValue = 25
+var age = (inputedValue > 18) ? "Can Purchase Alcohol":"Can Purchase Alcohol";
+
+// This is how it can be utilised
+
+var CTAChange = document.querySelector("CTA of purchase form");
+CTAChange.onclick(obj => obj.innerText = age)
+
+// In the example above once the CTA is clicked it lets them know if they are old enough to purchase alcohol

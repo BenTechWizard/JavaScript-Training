@@ -1,1 +1,14 @@
+// Request API on button click
 
+var AjaxRequest = new XMLHttpRequest();
+function RequestInfo(){
+    AjaxRequest.open("GET", "https://api.coindesk.com/v1/bpi/currentprice.json");
+    AjaxRequest.send();
+}
+        
+AjaxRequest.onload = function(){
+    var appendOBJ = document.querySelector("#info-insertion");
+    if(this.readyState == 4 && this.status == 200){
+        appendOBJ.innerHTML = this.responseText;
+    }
+}

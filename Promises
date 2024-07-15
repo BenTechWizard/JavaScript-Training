@@ -1,1 +1,19 @@
+// This function took a button and changed the innerText to be something different if the promise was successful - Jameson GB Website
+
+var homepageCTA = document.querySelector('.hero-home__container-content>[class="btn--primary"]');
+var homepageCTAV2 = homepageCTA.innerText.toLowerCase();
+
+var promisevariable = new Promise(function(resolve, reject) {
+    if(homepageCTAV2 == 'explore more'){
+      resolve("correct");
+    } else{
+        reject("incorrect");
+    }
+})
+
+promisevariable.then(value => {
+    homepageCTA.innerText = "new name";
+}).catch(error => {
+    console.log(error);
+});
 

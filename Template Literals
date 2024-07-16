@@ -1,0 +1,39 @@
+// This allows you to insert variables into strings i.e:
+
+var firstName = 'Ben';
+var lastName = 'Vamplew';
+
+var introduction = `
+   My Name is ${firstName} ${lastName}, what is yours?
+`;
+
+// A more advance use case would be inserting HTML code via this method, i.e:
+
+var HTMLInsertion = `
+   <div>
+      <h1>Hello</h1>
+      <p>I was inserted</p>
+   </div>
+`;
+
+document.querySelector("#Append-on-this-Element").innerHTML = HTMLInsertion;
+
+// The template above can be amended to allow for key values to be stored seperately and reinserted into the variable, this allows for better readablility of code.
+
+var keyValues = [
+   {
+      'title':'Hello',
+      'subTitle':'I was inserted'
+   }
+]
+
+var HTMLInsertion = `
+   <div>
+      <h1>${keyValues.title}</h1>
+      <p>${keyValues.subTitle}</p>
+   </div>
+`;
+
+document.querySelector("#Append-on-this-Element").innerHTML = HTMLInsertion;
+
+
